@@ -31,7 +31,7 @@
     <!-- header section start -->
     <header>
       <section class="container">
-        <nav class="navbar navbar-expand-lg bg-light p-3 shadow">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light p-3 shadow">
           <div class="container-fluid fw-bold">
             <a class="navbar-brand main-color fs-3" href="index.html"
               >Top News</a
@@ -70,10 +70,11 @@
 
     <!-- main section start -->
 
-    <main class="container my-5">
+    <main style="margin-top: 80px" class="container">
       <section>
-        <div class="card">
-          <h5 class="card-header">01. Difference between var, let, const</h5>
+        <!-- card  -->
+        <div class="card my-5">
+          <h4 class="card-header">01. Difference between var, let, const</h4>
           <div class="card-body row">
             <div class="col-md-4">
               <h5 class="card-title text-center mb-4">Var</h5>
@@ -97,6 +98,105 @@
             </div>
           </div>
         </div>
+        <!-- card  -->
+        <!-- card  -->
+        <div class="card my-5">
+          <h4 class="card-header">
+            02. Difference between arrow function or regular function
+          </h4>
+          <div class="card-body row">
+            <div class="col">
+              <p>
+                01. The first and most obvious difference between arrow
+                functions and regular functions is their syntax. Not only do
+                they look different, but arrow functions also provide an
+                implicit return shorthand and allow parenthesis around a single
+                argument to be omitted.
+              </p>
+              <p>
+                02. Inside a regular function, execution context (i.e. the value
+                of this) is dynamic. This means that the value of this depends
+                on how the function was invoked (simple invocation, method
+                invocation, indirect invocation or constructor invocation). On
+                the other hand, an arrow function does not define its own
+                execution context. This results in an arrow function's this
+                being resolved lexically (i.e. the scope in which the arrow
+                function was defined).
+              </p>
+              <p>
+                03. Due to arrow functions not defining their own execution
+                context, they're not well-suited for usage as methods. However,
+                thanks to the Class fields proposal, arrow functions can be used
+                as methods inside classes, if your environment supports it.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- card  -->
+        <!-- card  -->
+        <div class="card my-5">
+          <h4 class="card-header">
+            03. Difference between map, forEach, filter, find
+          </h4>
+          <div class="card-body row">
+            <div class="col">
+              <h5 class="card-title text-center mb-4">Map</h5>
+              <p>
+                One of my favourite and most used array method of all time. As a
+                ReactJS developer I use map a lot inside my application UI. Map
+                like filter & foreach takes a callback and run it against every
+                element on the array but whats makes it unique is it generate a
+                new array based on your existing array.
+              </p>
+
+              <h5 class="card-title text-center mb-4">Foreach</h5>
+              <p>
+                The easy one right ? we all know why this method is used for and
+                even you don’t know about this method the name pretty much
+                explains everything. Foreach takes a callback function and run
+                that callback function on each element of array one by one.
+              </p>
+
+              <h5 class="card-title text-center mb-4">Filter</h5>
+              <p>
+                Whenever you have to filter an array Javascript inbuilt method
+                to filter your array is the right choice to use. Filter let you
+                provide a callback for every element and returns a filtered
+                array.
+              </p>
+
+              <h5 class="card-title text-center mb-4">Find</h5>
+              <p>
+                Function .find() is also a search function like the previous but
+                they differ in one small detail — this function returns only one
+                match in an array. If in an array is more than one result, the
+                function will return the first that has matched.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- card  -->
+        <!-- card  -->
+        <div class="card my-5">
+          <h4 class="card-header">04. Why we use a template string</h4>
+          <div class="card-body row">
+            <div class="col">
+              <h5 class="card-title text-center mb-4">Template strings</h5>
+              <p>
+                Template strings are a powerful feature of modern JavaScript
+                released in ES6. It lets us insert/interpolate variables and
+                expressions into strings without needing to concatenate like in
+                older versions of JavaScript. It allows us to create strings
+                that are complex and contain dynamic elements. Another great
+                thing that comes with template strings are tags. Tags are
+                functions that take a string and the decomposed parts of the
+                string as parameters and are great for converting strings to
+                different entities.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- card  -->
       </section>
     </main>
 
