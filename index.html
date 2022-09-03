@@ -31,7 +31,7 @@
     <!-- header section start -->
     <header>
       <section class="container">
-        <nav class="navbar navbar-expand-lg bg-success p-3 shadow-lg">
+        <nav class="navbar navbar-expand-lg bg-light p-3 shadow">
           <div class="container-fluid fw-bold">
             <a class="navbar-brand main-color fs-3" href="#">Top News</a>
             <button
@@ -63,58 +63,46 @@
 
     <!-- main section start -->
     <main>
-      <section id="category-section" class="container my-5">
-        <!-- <div class="">
-          <ul class="list-group list-group-horizontal justify-content-center">
-            <li class="list-group-item border-0 hover">An active item</li>
-            <li class="list-group-item border-0 hover">A second item</li>
-            <li class="list-group-item border-0 hover">A third item</li>
-            <li class="list-group-item border-0 hover">A fourth item</li>
-            <li class="list-group-item border-0 hover">And a fifth one</li>
-            <li class="list-group-item border-0 hover">And a fifth one</li>
-            <li class="list-group-item border-0 hover">And a fifth one</li>
-            <li class="list-group-item border-0 hover">And a fifth one</li>
-          </ul>
-        </div> -->
+      <section id="category-section" class="container my-5"></section>
+
+      <section class="container">
+        <div id="display-news"></div>
       </section>
 
-      <section>
-        <div id="display-news" class="container">
-          <!-- <div class="card mb-3">
-            <div class="row g-0">
-              <div class="col-md-4">
-                <img src="..." class="img-fluid rounded-start" alt="..." />
+      <!-- modal -->
+      <section id="modal-field" class="container">
+        <!-- Button trigger modal -->
+        <!-- Modal -->
+        <div
+          class="modal fade"
+          id="exampleModal"
+          tabindex="-1"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
               </div>
-              <div class="col-md-8">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">
-                    This is a wider card with supporting text below as a natural
-                    lead-in to additional content. This content is a little bit
-                    longer.
-                  </p>
-                  <p class="card-text">
-                    <small class="text-muted">Last updated 3 mins ago</small>
-                  </p>
-                </div>
-                <div class="d-flex">
-                  <div>
-                    <img src="" alt="" class="img-fluid rounded-pill" />
-                    <p></p>
-                  </div>
-                  <div class="d-flex">
-                    <i class="bi bi-eye"></i>
-                    <p>1.5 M</p>
-                  </div>
-                  <div class="">
-                    <button class="btn">
-                      <i class="bi bi-arrow-right"></i>
-                    </button>
-                  </div>
-                </div>
+              <div id="modal-body" class="modal-body"></div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-bs-dismiss="modal"
+                >
+                  Close
+                </button>
               </div>
             </div>
-          </div> -->
+          </div>
         </div>
       </section>
     </main>
