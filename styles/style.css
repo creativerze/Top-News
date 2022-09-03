@@ -10,7 +10,23 @@ body{
   font-size: 17px;
   /* font-weight: 600; */
   color: rgb(116, 115, 115);
+  display: inline;
 }
 .hover:hover{
   color: #842029;
+}
+
+.footer-area{
+  background-color: #66171d;
+}
+
+
+
+/* ============================================ */
+
+@media screen and (max-width: 576px){
+  .hover{
+    display: block;
+    text-align: center;
+  }
 }

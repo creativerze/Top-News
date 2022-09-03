@@ -9,20 +9,6 @@ const displayCaregory = (names) => {
   const caregoryDiv = document.getElementById("category-section");
   const newDiv = document.createElement("div");
   const ul = document.createElement("ul");
-  ul.classList.add(
-    "list-group",
-    "list-group-horizontal",
-    "justify-content-between"
-  );
-  // names.forEach((name) => {
-  //   console.log(name);
-  //   const li = document.createElement("li");
-  //   li.classList.add("list-group-item", "border-0", "hover");
-  //   li.innerHTML = `
-  //   ${name.category_name}
-  //   `;
-  //   ul.appendChild(li);
-  // });
 
   ul.innerHTML = `
   <li onclick="newsCategory('${
@@ -79,10 +65,12 @@ const newsCategory = (id) => {
 };
 
 const displayNews = (news) => {
+  // console.log(news.length);
   // console.log(id.data.category_id);
   const getDisplayNews = document.getElementById("display-news");
   getDisplayNews.innerHTML = "";
   news.forEach((singleNews) => {
+    ///////////////////
     // console.log(singleNews);
     const singleNewsDiv = document.createElement("div");
     singleNewsDiv.classList.add("card", "mb-3");
@@ -91,7 +79,7 @@ const displayNews = (news) => {
     <div class="col-md-3">
       <img src="${
         singleNews.thumbnail_url
-      }" class="img-fluid rounded-start" alt="..." />
+      }" class="img-fluid rounded-start" alt="..." style="width: 100%; height: 300px" />
     </div>
     <div class="col-md-9 my-auto">
       <div class="card-body">
@@ -113,7 +101,7 @@ const displayNews = (news) => {
                     }</p>
                   </div>
 
-                  <div class="d-flex">
+                  <div class="d-flex text-secondary">
                     <i class="bi bi-eye pe-2"></i>
                     <p>${
                       singleNews.total_view
@@ -123,8 +111,8 @@ const displayNews = (news) => {
                   </div>
 
                   <div onclick="modalField('${singleNews._id}')" class="px-3">
-                    <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                      <i class="bi bi-arrow-right fs-5"></i>
+                    <button type="button" class="btn pe-4" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                      <i class="bi bi-arrow-right fs-4 main-color"></i>
                     </button>
                   </div>
                 </div>
@@ -148,12 +136,7 @@ const displayNews = (news) => {
     // return;
   }
 
-  let num = document.getElementById("display-news").childElementCount;
-  if (num > 1) {
-    document.getElementById("count-item").innerText = num;
-  } else {
-    document.getElementById("count-item").innerText = 0;
-  }
+  document.getElementById("count-item").innerText = news.length;
 };
 
 // modal
