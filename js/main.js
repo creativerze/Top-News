@@ -133,8 +133,6 @@ const displayNews = (news) => {
     `;
 
     getDisplayNews.appendChild(singleNewsDiv);
-
-    // console.log(singleNews.length);
     // console.log(singleNews);
   });
 
@@ -151,7 +149,6 @@ const displayNews = (news) => {
   }
 
   let num = document.getElementById("display-news").childElementCount;
-
   if (num > 1) {
     document.getElementById("count-item").innerText = num;
   } else {
