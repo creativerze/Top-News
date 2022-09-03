@@ -25,14 +25,46 @@ const displayCaregory = (names) => {
   // });
 
   ul.innerHTML = `
-  <li onclick="newsCategory('${names[0].category_id}')" class="list-group-item border-0 hover">${names[0].category_name}</li>
-  <li onclick="newsCategory('${names[1].category_id}')" class="list-group-item border-0 hover">${names[1].category_name}</li>
-  <li onclick="newsCategory('${names[2].category_id}')" class="list-group-item border-0 hover">${names[2].category_name}</li>
-  <li onclick="newsCategory('${names[3].category_id}')" class="list-group-item border-0 hover">${names[3].category_name}</li>
-  <li onclick="newsCategory('${names[4].category_id}')" class="list-group-item border-0 hover">${names[4].category_name}</li>
-  <li onclick="newsCategory('${names[5].category_id}')" class="list-group-item border-0 hover">${names[5].category_name}</li>
-  <li onclick="newsCategory('${names[6].category_id}')" class="list-group-item border-0 hover">${names[6].category_name}</li>
-  <li onclick="newsCategory('${names[7].category_id}')" class="list-group-item border-0 hover">${names[7].category_name}</li>
+  <li onclick="newsCategory('${
+    names[0].category_id
+  }'); spinners(${true})" class="list-group-item border-0 hover">${
+    names[0].category_name
+  }</li>
+  <li onclick="newsCategory('${
+    names[1].category_id
+  }'); spinners(${true})" class="list-group-item border-0 hover">${
+    names[1].category_name
+  }</li>
+  <li onclick="newsCategory('${
+    names[2].category_id
+  }'); spinners(${true})" class="list-group-item border-0 hover">${
+    names[2].category_name
+  }</li>
+  <li onclick="newsCategory('${
+    names[3].category_id
+  }'); spinners(${true})" class="list-group-item border-0 hover">${
+    names[3].category_name
+  }</li>
+  <li onclick="newsCategory('${
+    names[4].category_id
+  }'); spinners(${true})" class="list-group-item border-0 hover">${
+    names[4].category_name
+  }</li>
+  <li onclick="newsCategory('${
+    names[5].category_id
+  }'); spinners(${true})" class="list-group-item border-0 hover">${
+    names[5].category_name
+  }</li>
+  <li onclick="newsCategory('${
+    names[6].category_id
+  }'); spinners(${true})" class="list-group-item border-0 hover">${
+    names[6].category_name
+  }</li>
+  <li onclick="newsCategory('${
+    names[7].category_id
+  }'); spinners(${true})" class="list-group-item border-0 hover">${
+    names[7].category_name
+  }</li>
   `;
   newDiv.appendChild(ul);
   caregoryDiv.appendChild(newDiv);
@@ -58,10 +90,10 @@ const displayNews = (news) => {
     <div class="row g-2">
     <div class="col-md-3">
       <img src="${
-        singleNews.image_url
+        singleNews.thumbnail_url
       }" class="img-fluid rounded-start" alt="..." />
     </div>
-    <div class="col-md-9">
+    <div class="col-md-9 my-auto">
       <div class="card-body">
         <h5 class="card-title">${singleNews.title}</h5>
         <p id="short-text" class="card-text">
@@ -103,6 +135,8 @@ const displayNews = (news) => {
     // console.log(singleNews);
   });
 
+  spinners(false);
+
   if (getDisplayNews.innerHTML !== "") {
     return;
   } else {
@@ -141,6 +175,16 @@ const displayModal = (modals) => {
     `;
   });
 };
+
+const spinners = (isLoading) => {
+  const getSpinners = document.getElementById("spinners");
+  if (isLoading) {
+    getSpinners.classList.remove("d-none");
+  } else {
+    getSpinners.classList.add("d-none");
+  }
+};
+
 // modalField();
 
 // newsCategory();
