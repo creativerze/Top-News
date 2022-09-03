@@ -12,7 +12,7 @@ const displayCaregory = (names) => {
   ul.classList.add(
     "list-group",
     "list-group-horizontal",
-    "justify-content-center"
+    "justify-content-between"
   );
   // names.forEach((name) => {
   //   console.log(name);

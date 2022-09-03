@@ -50,12 +50,15 @@
             <div class="collapse navbar-collapse" id="navbarNav">
               <ul class="navbar-nav ms-auto fw-bold">
                 <li class="nav-item">
-                  <a class="nav-link main-color" aria-current="page" href="#"
+                  <a
+                    class="nav-link main-color"
+                    aria-current="page"
+                    href="index.html"
                     >News</a
                   >
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link main-color" href="blog.html">Blogs</a>
+                  <a class="nav-link main-color" href="#">Blogs</a>
                 </li>
               </ul>
             </div>
@@ -66,74 +69,37 @@
     <!-- header section end -->
 
     <!-- main section start -->
-    <main>
-      <!-- category section start  -->
-      <section id="category-section" class="container my-5"></section>
-      <!-- category section end  -->
 
-      <!-- count news section start  -->
-      <section class="container my-5">
-        <div class="">
-          <p class="fs-5 ps-4">Items Found: <span id="count-item">0</span></p>
-        </div>
-      </section>
-      <!-- count news section end  -->
-
-      <!-- news section start  -->
-      <section class="container">
-        <div id="display-news"></div>
-      </section>
-      <!-- news section end -->
-
-      <!-- modal start -->
-      <section id="modal-field" class="container">
-        <div
-          class="modal fade"
-          id="exampleModal"
-          tabindex="-1"
-          aria-labelledby="exampleModalLabel"
-          aria-hidden="true"
-        >
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                <button
-                  type="button"
-                  class="btn-close"
-                  data-bs-dismiss="modal"
-                  aria-label="Close"
-                ></button>
-              </div>
-              <div id="modal-body" class="modal-body"></div>
-              <div class="modal-footer">
-                <button
-                  type="button"
-                  class="btn btn-secondary"
-                  data-bs-dismiss="modal"
-                >
-                  Close
-                </button>
-              </div>
+    <main class="container my-5">
+      <section>
+        <div class="card">
+          <h5 class="card-header">01. Difference between var, let, const</h5>
+          <div class="card-body row">
+            <div class="col-md-4">
+              <h5 class="card-title text-center mb-4">Var</h5>
+              <p>01. The scope of a var variable is functional scope.</p>
+              <p>02. It can be updated and re-declared into the scope.</p>
+              <p>03. It can be declared without initialization.</p>
+            </div>
+            <div class="col-md-4">
+              <h5 class="card-title text-center mb-4">Let</h5>
+              <p>01. The scope of a let variable is block scope.</p>
+              <p>
+                02. It can be updated but cannot be re-declared into the scope.
+              </p>
+              <p>03. It can be declared without initialization.</p>
+            </div>
+            <div class="col-md-4">
+              <h5 class="card-title text-center mb-4">Const</h5>
+              <p>01. The scope of a const variable is block scope.</p>
+              <p>02. It cannot be updated or re-declared into the scope.</p>
+              <p>03. It cannot be declared without initialization.</p>
             </div>
           </div>
         </div>
       </section>
-      <!-- modal end -->
-
-      <!-- spinners start  -->
-      <section id="spinners" class="container d-none">
-        <div
-          style="height: 200px"
-          class="d-flex justify-content-center align-items-center"
-        >
-          <div class="spinner-border text-success" role="status">
-            <span class="visually-hidden">Loading...</span>
-          </div>
-        </div>
-      </section>
-      <!-- spinners end -->
     </main>
+
     <!-- main section end -->
 
     <!-- bootstrap js link  -->
