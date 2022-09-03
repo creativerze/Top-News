@@ -131,20 +131,31 @@ const displayNews = (news) => {
     </div>
   </div>
     `;
+
     getDisplayNews.appendChild(singleNewsDiv);
+
+    // console.log(singleNews.length);
     // console.log(singleNews);
   });
 
   spinners(false);
 
-  if (getDisplayNews.innerHTML !== "") {
-    return;
-  } else {
+  if (getDisplayNews.innerHTML === "") {
     // console.log("no news");
     const getDisplayNews = document.getElementById("display-news");
     getDisplayNews.innerHTML = `
-       <h3 class="text-center text-danger py-5">No News Found</h3>
-     `;
+    <h3 class="text-center text-danger py-5">No News Found</h3>
+    `;
+  } else {
+    // return;
+  }
+
+  let num = document.getElementById("display-news").childElementCount;
+
+  if (num > 1) {
+    document.getElementById("count-item").innerText = num;
+  } else {
+    document.getElementById("count-item").innerText = 0;
   }
 };
 
