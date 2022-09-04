@@ -155,7 +155,7 @@ const displayModal = (modals) => {
   // const getModalField = document.getElementById("modal-field");
 
   modals.forEach((modal) => {
-    console.log(modal);
+    // console.log(modal);
     const modalTitle = document.getElementById("exampleModalLabel");
     modalTitle.innerText = "Author Information";
     const modalBody = document.getElementById("modal-body");
