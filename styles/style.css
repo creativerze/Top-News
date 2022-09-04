@@ -5,6 +5,12 @@ body{
 .main-color{
   color: #842029 !important;
 }
+.main-bg-color{
+  background-color: #842029 !important;
+}
+.main-border-color{
+  border: 1px solid #842029;
+}
 
 .hover{
   font-size: 17px;

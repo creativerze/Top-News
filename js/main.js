@@ -65,8 +65,10 @@ const newsCategory = (id) => {
 };
 
 const displayNews = (news) => {
-  // console.log(news.length);
-  // console.log(id.data.category_id);
+  news.sort((a, b) => {
+    return b.total_view - a.total_view;
+  });
+
   const getDisplayNews = document.getElementById("display-news");
   getDisplayNews.innerHTML = "";
   news.forEach((singleNews) => {
@@ -149,18 +151,21 @@ const modalField = (news_id) => {
 };
 
 const displayModal = (modals) => {
-  console.log(modals);
+  // console.log(modals);
   // const getModalField = document.getElementById("modal-field");
 
   modals.forEach((modal) => {
     console.log(modal);
     const modalTitle = document.getElementById("exampleModalLabel");
-    modalTitle.innerText = "Author Details";
+    modalTitle.innerText = "Author Information";
     const modalBody = document.getElementById("modal-body");
     modalBody.innerHTML = `
      <img src="${modal.author.img}" alt="" class="img-fluid">
      <p class="my-4">Author Name: ${
        modal.author.name ? modal.author.name : "No data available"
+     }</p>
+     <p>Rating: ${
+       modal.rating.number ? modal.rating.number : "No data found"
      }</p>
     <p>Viewed: ${modal.total_view ? modal.total_view : "No data available"}</p>
     `;
